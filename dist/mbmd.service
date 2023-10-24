@@ -1,0 +1,9 @@
+[Unit]
+Description=mbmd
+After=syslog.target
+After=network-online.target
+[Service]
+ExecStart=/usr/local/bin/mbmd run -c /etc/mbmd.yaml
+Restart=always
+[Install]
+WantedBy=multi-user.target

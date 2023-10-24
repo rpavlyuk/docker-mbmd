@@ -1,0 +1,26 @@
+# REST api, use 127.0.0.1 to restrict to localhost
+api: 0.0.0.0:8080
+
+# mqtt config
+mqtt:
+  broker: 192.168.1.5:1883
+  topic: mbmd
+  user:
+  password:
+  clientid: mbmd
+  qos: 0
+  homie: homie
+
+# adapters are referenced by device
+adapters:
+- device: 192.168.3.33:8899
+  rtu: true # Modbus RS485 to Ethernet converter uses RTU over TCP
+  baudrate: 9600
+  comset: 8N1
+
+# list of devices
+devices:
+- name: sdm2
+  type: sdm
+  id: 1
+  adapter: 192.168.3.33:8899
