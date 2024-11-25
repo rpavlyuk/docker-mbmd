@@ -1,8 +1,8 @@
 ############################
 # STEP 1 build executable binary
 ############################
-FROM fedora:latest as builder
-MAINTAINER "Roman Pavlyuk" <roman.pavlyuk@gmail.com>
+FROM fedora:latest AS builder
+LABEL maintainer="Roman Pavlyuk <roman.pavlyuk@gmail.com>"
 
 # Install git + SSL ca certificates.
 # Git is required for fetching the dependencies.

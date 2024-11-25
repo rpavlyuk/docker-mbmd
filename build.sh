@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t rpavlyuk/mbmd .
+docker build --pull -t rpavlyuk/mbmd .
