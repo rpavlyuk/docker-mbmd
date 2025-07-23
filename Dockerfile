@@ -33,7 +33,7 @@ FROM fedora:latest
 
 # Refresh container
 RUN dnf update -y
-RUN dnf install -y ca-certificates tzdata less vim
+RUN dnf install -y ca-certificates tzdata less vim procps-ng net-tools iputils
 RUN /usr/bin/update-ca-trust
 
 ENV container=docker
@@ -67,4 +67,5 @@ EXPOSE 8080
 
 # Run the binary
 VOLUME ["/sys/fs/cgroup"]
+VOLUME ["/var/log/journal"]
 CMD ["/sbin/init"]
